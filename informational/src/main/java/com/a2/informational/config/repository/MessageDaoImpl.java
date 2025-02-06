@@ -1,0 +1,36 @@
+package com.a2.informational.config.repository;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.a2.informational.models.MessageEntity;
+
+@Repository
+public class MessageDaoImpl implements MessageDao {
+	
+	@Autowired
+	private RedisTemplate redisTemplate;
+	
+	private static final String KEY = "MESSAGE";
+	
+	@Override
+	public boolean saveMessage(MessageEntity messageEntity) {
+		try {
+			redisTemplate.opsForHash().put(KEY, messageEntity.getId().toString(), messageEntity);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	@Override
+	public List<MessageEntity> fetchAllMessages() {
+		List<MessageEntity> messages = redisTemplate.opsForHash().values(KEY);
+		return messages;
+			
+	}
+}
