@@ -14,7 +14,7 @@ public record DescriptiveDTO(
 		@NotNull String fullDescription,
 		@NotNull boolean isActive,
 		@NotNull Author author,
-		@NotBlank List<TopicDto> relatedTopics,
-		@NotBlank List<SourceDto> sources,
+		@NotNull List<TopicDto> relatedTopics,
+		@NotNull List<SourceDto> sources,
 		String motivation
 		) {}
