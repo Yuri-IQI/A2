@@ -192,7 +192,6 @@ INDEX VERSION 1.134+/home/anthonyyuri/Downloads/A2/.metadata/.plugins/org.eclips
 2501497638.index
 601293691.index
 616845026.index
-4261733667.index
 3066635222.index
 742078808.index
 3909731575.index
