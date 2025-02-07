@@ -22,9 +22,12 @@ pipeline {
 
         stage('Running Services') {
             steps {
-                script {
-                    sh './mvnw -f eureka spring-boot:run &'
-                    sh './mvnw -f gateway spring-boot:run &'
+                dir('eureka') {
+                    sh './mvnw -f spring-boot:run'
+                }
+
+                dir('gateway') {
+                    sh './mvnw -f spring-boot:run'
                 }
             }
         }
