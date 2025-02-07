@@ -20,19 +20,21 @@ pipeline {
             }
         }
 
-        parallel {
-            stage('Running Eureka') {
-                steps {
-                    dir('eureka') {
-                        sh './mvnw spring-boot:run'
+        stage('Parallel Stages') {
+            parallel {
+                stage('Running Eureka') {
+                    steps {
+                        dir('eureka') {
+                            sh './mvnw spring-boot:run'
+                        }
                     }
                 }
-            }
 
-            stage('Running Gateway') {
-                steps {
-                    dir('gateway') {
-                        sh './mvnw spring-boot:run'
+                stage('Running Gateway') {
+                    steps {
+                        dir('gateway') {
+                            sh './mvnw spring-boot:run'
+                        }
                     }
                 }
             }
