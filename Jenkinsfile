@@ -19,8 +19,8 @@ pipeline {
         }
 
         stage('Setup Kafka') {
-            dir('kafka') {
-                steps {
+            steps {
+                dir('kafka') {
                     sh 'docker-compose up -d'
                 }
             }
