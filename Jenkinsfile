@@ -6,12 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Cloning Git Repository') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Yuri-IQI/A2.git'
-            }
-        }
-
         stage('Docker Login') {
             steps {
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
