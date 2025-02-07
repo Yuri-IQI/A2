@@ -1,0 +1,5 @@
+package com.a2.informational.dtos;
+
+public class TopicDto {
+
+}

@@ -1,0 +1,18 @@
+package com.a2.informational;
+
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
+
+@Service
+public class InformationalProducer {
+	
+	private KafkaTemplate<String, String> kafkaTemplate;
+	
+	public InformationalProducer(KafkaTemplate<String, String> kafkaTemplate) {
+		this.kafkaTemplate = kafkaTemplate;
+	}
+	
+	public void forwardProcessRequest(String processedRequest) {
+		kafkaTemplate.send("processed-requests-topic", processedRequest);
+	}
+}

@@ -1,0 +1,2 @@
+spring.application.name=informational
+server.port=8999

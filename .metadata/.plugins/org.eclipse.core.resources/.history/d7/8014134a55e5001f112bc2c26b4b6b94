@@ -1,0 +1,5 @@
+package com.a2.informational.controllers;
+
+public class DescriptionController {
+
+}

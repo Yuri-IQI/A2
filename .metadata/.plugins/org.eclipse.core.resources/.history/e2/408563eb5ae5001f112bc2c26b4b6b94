@@ -1,0 +1,19 @@
+package com.a2.informational.dtos;
+
+import java.util.List;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
+public record DescriptiveDTO(
+		@NotBlank String referredObject,
+		@NotNull @Size(max=60) String shortDescription,
+		@NotNull String fullDescription,
+		@NotNull boolean isActive,
+		@NotBlank List<String> relatedTopics,
+		@NotBlank List<String> sources,
+		String motivation
+		) {
+
+}

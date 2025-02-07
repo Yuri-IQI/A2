@@ -20,6 +20,12 @@ pipeline {
             }
         }
 
+        stage('Run Redis') {
+            steps {
+                sh 'docker run --name redis -p 6379:6379 -d redis'
+            }
+        }
+
         stage('Parallel Stages') {
             parallel {
                 stage('Running Eureka') {
@@ -33,6 +39,14 @@ pipeline {
                 stage('Running Gateway') {
                     steps {
                         dir('gateway') {
+                            sh './mvnw spring-boot:run'
+                        }
+                    }
+                }
+
+                stage('Running Informational') {
+                    steps {
+                        dir('informational') {
                             sh './mvnw spring-boot:run'
                         }
                     }

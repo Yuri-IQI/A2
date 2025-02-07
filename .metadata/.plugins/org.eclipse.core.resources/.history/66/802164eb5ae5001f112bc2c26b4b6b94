@@ -1,0 +1,5 @@
+package com.a2.informational.models;
+
+public class Author {
+
+}
