@@ -31,8 +31,8 @@ public class DescriptionController {
 		return new ResponseEntity<>(description, HttpStatus.CREATED);
 	}
 	
-	@GetMapping()
-	public ResponseEntity<List<Object>> getAllDescriptions(String key) {
+	@GetMapping("/{key}")
+	public ResponseEntity<List<Object>> getAllDescriptions(@RequestParam String key) {
 		return new ResponseEntity<>(descriptionService.getAllDescriptions(key), HttpStatus.OK);
 	}
 }
