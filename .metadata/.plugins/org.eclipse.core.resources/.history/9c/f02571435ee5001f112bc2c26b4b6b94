@@ -1,5 +1,0 @@
-package com.a2.informational.dtos;
-
-public record ActivityDto() {
-
-}

@@ -44,9 +44,9 @@ pipeline {
                     }
                 }
 
-                stage('Running Informational') {
+                stage('Running Lethargy') {
                     steps {
-                        dir('informational') {
+                        dir('lethargy') {
                             sh './mvnw spring-boot:run'
                         }
                     }

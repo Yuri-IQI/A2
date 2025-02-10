@@ -1,9 +1,0 @@
-package com.a2.informational.config.repository;
-
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface TopicDao {
-	boolean saveTopic(Topic)
-	
-}

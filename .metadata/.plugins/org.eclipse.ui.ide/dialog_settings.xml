@@ -6,6 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/anthonyyuri/Downloads/A2/lethargy"/>
+			<item value="/home/anthonyyuri/Downloads/A2/informational(old)"/>
 			<item value="/home/anthonyyuri/Downloads/A2/eureka"/>
 			<item value="/home/anthonyyuri/Downloads/A2/gateway"/>
 			<item value="/home/anthonyyuri/Downloads/A2/informational"/>
@@ -17,5 +19,12 @@
 			<item key="DIALOG_HEIGHT" value="649"/>
 			<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
 		</section>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="20"/>
+		<item key="DIALOG_Y_ORIGIN" value="20"/>
+		<item key="DIALOG_WIDTH" value="613"/>
+		<item key="DIALOG_HEIGHT" value="578"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
 	</section>
 </section>
